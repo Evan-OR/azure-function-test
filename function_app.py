@@ -15,7 +15,7 @@ app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
 
 @app.route(route="url_redirect")
 def url_redirect(req: func.HttpRequest) -> func.HttpResponse:
-    logging.info("Python HTTP trigger processed a request.")
+    logging.info("Python HTTP trigger has processed a request.")
     rc = ResponseController()
 
     code = req.params.get("code")
